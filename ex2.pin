@@ -1,0 +1,25 @@
+
+
+ Pin # | Name     | Pin Type
+-----------------------------
+   1   | Clock    | Clock
+   2   | NC       | Input
+   3   | DI       | Input
+   4   | I3       | Input
+   5   | I2       | Input
+   6   | I1       | Input
+   7   | I0       | Input
+   8   | /R       | Input
+   9   | NC       | Input
+  10   | GND      | GND
+  11   | /OE      | /OE
+  12   | FSKP     | Output
+  13   | IEN      | Output
+  14   | OEN      | Output
+  15   | RRR      | Output
+  16   | JMP      | Output
+  17   | RR       | Output
+  18   | DO       | Output
+  19   | W        | Output
+  20   | VCC      | VCC
+

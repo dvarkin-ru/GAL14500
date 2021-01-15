@@ -1,0 +1,59 @@
+GAL16V8                                 MC14500-LIKE UNIT
+ICU1
+
+Clock NC    DI    I3    I2    I1    I0    /R    NC    GND
+/OE   FSKP  IEN   OEN   RRR   JMP   RR    DO    W     VCC
+
+
+RR.R  =  I3                               *  RR   * R
+      + /I3 * /I2 * /I1 * /I0             *  RR   * R
+      + /I3 * /I2 * /I1 *  I0 * IEN *  DI * /FSKP * R
+      + /I3 * /I2 *  I1 * /I0 * IEN * /DI * /FSKP * R
+      + /I3 * /I2 *  I1 * /I0 */IEN       * /FSKP * R
+      + /I3 * /I2 *  I1 *  I0 * IEN *  DI *  RR   * R
++ RRR * /I3 *  I2                         * /FSKP * R
+
+/RRR  = /I3 * /I2 * /I1 * /I0 * IEN *  DI
+      + /I3 * /I2 * /I1       */IEN       * /RR
+      + /I3 * /I2 * /I1       * IEN * /DI * /RR
+      + /I3 * /I2 *  I1 * /I0 * IEN *  DI * /RR
+      + /I3 * /I2 *  I1 *  I0 * IEN *  DI *  RR
+      + /I3 * /I2 *  I1 *  I0 * IEN * /DI * /RR
+      + /I3 * /I2 *  I1 *  I0 */IEN       * /RR
+
+DO.R  =  I3 * /I2 * /I1 * /I0             *  RR
+      +  I3 * /I2 * /I1 *  I0             * /RR
+
+W.R   =  I3 * /I2 * /I1 * /I0 * OEN       * /FSKP
+      +  I3 * /I2 * /I1 *  I0 * OEN       * /FSKP
+
+IEN.R =  I3 * /I2 *  I1 * /I0       *  DI * /FSKP * R
+      + /I3                   * IEN               * R
+            +  I2             * IEN               * R
+                  + /I1       * IEN               * R
+                        +  I0 * IEN               * R
+                              + IEN       *  FSKP * R
+
+OEN.R =  I3 * /I2 *  I1 *  I0       *  DI * /FSKP * R
+      + /I3                   * OEN               * R
+            +  I2             * OEN               * R
+                  + /I1       * OEN               * R
+                        + /I0 * OEN               * R
+                              + OEN       *  FSKP * R
+
+JMP.R =  I3 *  I2 * /I1 * /I0             * /FSKP
+
+FSKP.R = I3 *  I2 *  I1 * /I0             * /RR   * R
+      +  I3 *  I2 * /I1 *  I0                     * R
+
+
+DESCRIPTION
+
+RRR                - ADDITIONAL TERM FOR LOGICAL UNIT
+         I3    I2    I1    I0      - INSTRUCTION PINS
+OUTPUT ENABLE REG -            OEN
+INPUT ENABLE REG  -            IEN
+DATA INPUT        -                   DI
+RESULT REGISTER   -                         RR
+SKIP FLIP-FLOP    -                         FSKP   
+RESET             -                                R
