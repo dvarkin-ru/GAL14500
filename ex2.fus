@@ -28,7 +28,7 @@ Pin 17 = RR           XOR = 1   AC1 = 0
  20  ---- ---- -x-- -x-- x--- -x-- -x-x ---x
  21  ---- x--- -xx- -x-- x--- x--- -xx- ----
  22  ---- ---- -x-- x--- --x- ---- -x-- ---x
- 23  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 23  ---- ---- --x- ---- ---- ---- -x-- --x-
 
 Pin 16 = JMP          XOR = 1   AC1 = 0
  24  ---- ---- x--- x--- -x-- -x-- ---- ---x

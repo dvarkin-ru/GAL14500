@@ -12,6 +12,7 @@ RR.R  =  I3                               *  RR   * R
       + /I3 * /I2 *  I1 * /I0 */IEN       * /FSKP * R
       + /I3 * /I2 *  I1 *  I0 * IEN *  DI *  RR   * R
 + RRR * /I3 *  I2                         * /FSKP * R
++ RR                                      *  FSKP * R
 
 /RRR  = /I3 * /I2 * /I1 * /I0 * IEN *  DI
       + /I3 * /I2 * /I1       */IEN       * /RR
