@@ -14,13 +14,13 @@ RR.R  =  I3                               *  RR   * R
 + RRR * /I3 *  I2                         * /FSKP * R
 + RR                                      *  FSKP * R
 
-/RRR  = /I3 * /I2 * /I1 * /I0 * IEN *  DI
-      + /I3 * /I2 * /I1       */IEN       * /RR
-      + /I3 * /I2 * /I1       * IEN * /DI * /RR
-      + /I3 * /I2 *  I1 * /I0 * IEN *  DI * /RR
-      + /I3 * /I2 *  I1 *  I0 * IEN *  DI *  RR
-      + /I3 * /I2 *  I1 *  I0 * IEN * /DI * /RR
-      + /I3 * /I2 *  I1 *  I0 */IEN       * /RR
+/RRR  = /I3 *  I2 * /I1 * /I0 * IEN *  DI
+      + /I3 *  I2 * /I1       */IEN       * /RR
+      + /I3 *  I2 * /I1       * IEN * /DI * /RR
+      + /I3 *  I2 *  I1 * /I0 * IEN *  DI * /RR
+      + /I3 *  I2 *  I1 *  I0 * IEN *  DI *  RR
+      + /I3 *  I2 *  I1 *  I0 * IEN * /DI * /RR
+      + /I3 *  I2 *  I1 *  I0 */IEN       * /RR
 
 DO.R  =  I3 * /I2 * /I1 * /I0             *  RR
       +  I3 * /I2 * /I1 *  I0             * /RR
