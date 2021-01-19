@@ -21,8 +21,12 @@ RR.R  =  I3                               *  RR   * R
       + /I3 *  I2 *  I1 *  I0 * IEN * /DI *  RR
       + /I3 *  I2 *  I1 *  I0 */IEN       *  RR
 
-DO.R  =  I3 * /I2 * /I1 * /I0             *  RR
-      +  I3 * /I2 * /I1 *  I0             * /RR
+DO.R  =  I3 * /I2 * /I1 * /I0 */FSKP      *  RR
+      +  I3 * /I2 * /I1 *  I0 */FSKP      * /RR
+      + /I3                         * DO          * R
+            +  I2                   * DO          * R
+                  +  I1             * DO          * R
+                                    + DO  *  FSKP * R
 
 W.R   =  I3 * /I2 * /I1 * /I0 * OEN       * /FSKP
       +  I3 * /I2 * /I1 *  I0 * OEN       * /FSKP
