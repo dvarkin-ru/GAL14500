@@ -47,8 +47,8 @@ OEN.R =  I3 * /I2 *  I1 *  I0       *  DI * /FSKP * R
 
 JMP.R =  I3 *  I2 * /I1 * /I0             * /FSKP
 
-FSKP.R = I3 *  I2 *  I1 * /I0             * /RR   * R
-      +  I3 *  I2 * /I1 *  I0                     * R
+FSKP.R = I3 *  I2 *  I1 * /I0 * /RR       * /FSKP * R
+       + I3 *  I2 * /I1 *  I0             * /FSKP * R
 
 
 DESCRIPTION
