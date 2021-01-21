@@ -1,8 +1,6 @@
 # GAL16V8 MC14500-LIKE UNIT
 
-The Motorola MC14500B is a single chip, one-bit static CMOS processor optimized for decision-oriented tasks. The processor is housed in a 16-pin package and features 16-four-bit instructions. The instructions perform logical operations on data appearing on a one-bit bidirectional data line and data in a one-bit accumulating Result Register within the ICU. All operations are performed at the bit level.
-
-See more in [MC14000B INDUSTRIAL CONTROL UNIT HANDBOOK](https://archive.org/details/bitsavers_motorola14alControlUnitHandbook1977_4934745).
+See more about MC14500 in [MC14000B INDUSTRIAL CONTROL UNIT HANDBOOK](https://archive.org/details/bitsavers_motorola14alControlUnitHandbook1977_4934745).
 
 This GAL (ATF16V8B...) version of the MC14500 has an original instruction set, but it has some differences in working with peripherals:
 

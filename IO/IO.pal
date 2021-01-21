@@ -1,0 +1,44 @@
+GAL16V8                    MC14500-LIKE UNIT IO AND CLOCK
+ICUIO1
+
+Clock A2    A1    A0    RD    I4    I5    I6    TIN   GND
+/OE   NTOUT TOUT  O0    O1    O2    O3    DIN   DOUT  VCC
+
+TOUT = TIN
+
+NTOUT = /TIN
+
+DOUT.R = /A2 * /A1 * /A0 * O0  *  RD
+       + /A2 * /A1 *  A0 * O1  *  RD
+       + /A2 *  A1 * /A0 * O2  *  RD
+       + /A2 *  A1 *  A0 * O3  *  RD
+       +  A2 * /A1 * /A0 * I4  *  RD
+       +  A2 * /A1 *  A0 * I5  *  RD
+       +  A2 *  A1 * /A0 * I6  *  RD
+       +  A2 *  A1 *  A0 * DIN *  RD
+
+O0.R =   /A2 * /A1 * /A0 * DIN * /RD
+     +    A2                   * /RD
+             +  A1             * /RD
+                   +  A0       * /RD
+                         + O0  *  RD
+
+O1.R =   /A2 * /A1 *  A0 * DIN * /RD
+     +    A2                   * /RD
+             +  A1             * /RD
+                   + /A0       * /RD
+                         + O1  *  RD
+
+O2.R =   /A2 *  A1 * /A0 * DIN * /RD
+     +    A2                   * /RD
+             + /A1             * /RD
+                   +  A0       * /RD
+                         + O2  *  RD
+
+O3.R =   /A2 *  A1 *  A0 * DIN * /RD
+     +    A2                   * /RD
+             + /A1             * /RD
+                   + /A0       * /RD
+                         + O3  *  RD
+
+DESCRIPTION
