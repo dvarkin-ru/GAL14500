@@ -8,14 +8,13 @@ TOUT = TIN
 
 NTOUT = /TIN
 
-DOUT.R = /A2 * /A1 * /A0 * O0  *  RD
-       + /A2 * /A1 *  A0 * O1  *  RD
-       + /A2 *  A1 * /A0 * O2  *  RD
-       + /A2 *  A1 *  A0 * O3  *  RD
-       +  A2 * /A1 * /A0 * I4  *  RD
-       +  A2 * /A1 *  A0 * I5  *  RD
-       +  A2 *  A1 * /A0 * I6  *  RD
-       +  A2 *  A1 *  A0 * DIN *  RD
+DOUT   = /A2 * /A1 * /A0 * O0
+       + /A2 * /A1 *  A0 * O1
+       + /A2 *  A1 * /A0 * O2
+       + /A2 *  A1 *  A0 * O3
+       +  A2 * /A1 * /A0 * I4
+       +  A2 * /A1 *  A0 * I5
+       +  A2 *  A1 * /A0 * I6
 
 O0.R =   /A2 * /A1 * /A0 * DIN * /RD
      +    A2                   * /RD

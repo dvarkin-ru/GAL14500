@@ -1,0 +1,54 @@
+GAL16V8                    MC14500-LIKE UNIT ROM CONTROL
+ICUROM1
+
+
+Clock NC    NC    NC    NC    NC    NC    NC    NC   GND
+/OE   HOLD  SCK   SDA   NC    Q3    Q2    Q1    Q0   VCC
+
+
+
+Q0.R = /Q0 * HOLD * /SCK * Q1
+     + /Q0 * HOLD * /SCK * Q2
+     + /Q0 * HOLD * /SCK * Q3
+     +  Q0 * /HOLD
+     +  Q0 * SCK
+     +  Q3 * Q2 *  Q1 * Q0 * /SDA * HOLD * /SCK
+     +  Q3 * Q2 * /Q1 * Q0 *  SDA * HOLD * /SCK
+
+Q1.R = Q1 *  Q0  * HOLD * /SCK
+     + Q2 * /Q1 * /Q0 * HOLD * /SCK
+     + Q3 * /Q1 * /Q0 * HOLD * /SCK
+     + Q1 * /HOLD
+     + Q1 * SCK
+
+Q2.R = Q2 *  Q0 * HOLD * /SCK
+     + Q2 *  Q1 * HOLD * /SCK
+     + Q3 * /Q2 */Q1 */Q0 * HOLD * /SCK
+     + Q2 * /HOLD
+     + Q2 * SCK
+
+Q3.R =  Q3 *  Q2 * HOLD * /SCK
+     +  Q3 *  Q1 * HOLD * /SCK
+     +  Q3 *  Q0 * HOLD * /SCK
+     + /Q3 * /Q2 * /Q1 * /Q0 * HOLD * /SCK
+     +  Q3 * /HOLD
+     +  Q3 * SCK
+
+SCK.R = Q3 * Q2 * Q1 * Q0 * SDA * HOLD
+      + /HOLD * /SCK
+
+HOLD.R = SCK
+
+;SDA.R = /HOLD * SDA
+;      +  Q3   *  Q2  * Q1  * /SDA * /SCK * HOLD
+;      +  Q3   *  Q2  * /Q1 * Q0 * /SDA * FSKP * A0 * /SCK * HOLD
+;      +  Q3   *  Q2  * /Q1 */Q0 *  FSKP * A1
+;      +  Q3   *  Q2  * /Q1 * /SDA * /FSKP
+;      +  Q3   *
+;      + /Q3   * /Q2  * /Q1 * /Q0 
+/SDA.R = /HOLD * /SDA
+       +  HOLD * SCK 
+       + Q3 * Q2 * Q1 * HOLD * SDA
+       + Q3 */Q1 * Q0 * HOLD * SDA  
+       +/Q2 */Q1 */Q0 * HOLD * SDA
+DESCRIPTION
