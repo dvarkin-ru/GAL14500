@@ -2,7 +2,7 @@ GAL16V8                    MC14500-LIKE UNIT ROM CONTROL
 ICUROM1
 
 
-Clock A0    A1    A2    NC    NC    NC    NC    NC   GND
+Clock A0    A1    A2    JMP   R     NC    NC    NC   GND
 /OE   NC    SCK   SDA   HOLD  Q3    Q2    Q1    Q0   VCC
 
 
@@ -33,11 +33,18 @@ Q3.R =  Q3 *  Q2 * HOLD * /SCK
      + /Q3 * /Q2 * /Q1 * /Q0 * HOLD * /SCK
      +  Q3 * /HOLD
      +  Q3 * SCK
+     +  Q3 * /Q2 * /Q1 * /Q0 * HOLD * JMP
+     +  Q3 * /Q2 * /Q1 * /Q0 * HOLD * R
 
 SCK.R = Q3 * Q2 * Q1 * Q0 * SDA * HOLD * SCK
       + /HOLD * /SCK
+      + Q3 */Q2 */Q1 */Q0 * HOLD * JMP
+      + Q3 */Q2 */Q1 */Q0 * HOLD * R
+      + Q3 * Q2 * Q1 * Q0 * R
 
 HOLD.R = SCK
+       + Q3 */Q2 */Q1 */Q0 * HOLD * JMP
+       + Q3 */Q2 */Q1 */Q0 * HOLD * R
 
 /SDA.R = /HOLD * /SDA
        +  HOLD *  SCK

@@ -37,13 +37,13 @@ Pin 16 = Q3           XOR = 1   AC1 = 0
  27  ---x ---x ---x ---x --x- ---- ---x ----
  28  ---- ---- ---- --x- ---x ---- ---- ----
  29  ---- ---- ---- --x- ---- ---- --x- ----
- 30  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
- 31  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 30  ---x ---x ---x x-x- --x- ---- ---- ----
+ 31  ---x ---x ---x --x- x-x- ---- ---- ----
 
 Pin 15 = HOLD         XOR = 1   AC1 = 0
  32  ---- ---- ---- ---- ---- ---- --x- ----
- 33  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
- 34  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 33  ---x ---x ---x x-x- --x- ---- ---- ----
+ 34  ---x ---x ---x --x- x-x- ---- ---- ----
  35  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  36  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  37  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -63,9 +63,9 @@ Pin 14 = SDA          XOR = 0   AC1 = 0
 Pin 13 = SCK          XOR = 1   AC1 = 0
  48  --x- --x- --x- --x- --x- --x- --x- ----
  49  ---- ---- ---- ---- ---x ---- ---x ----
- 50  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
- 51  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
- 52  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 50  ---x ---x ---x x-x- --x- ---- ---- ----
+ 51  ---x ---x ---x --x- x-x- ---- ---- ----
+ 52  --x- --x- --x- --x- x--- ---- ---- ----
  53  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  54  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  55  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
