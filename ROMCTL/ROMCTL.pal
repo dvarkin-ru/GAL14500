@@ -2,8 +2,8 @@ GAL16V8                    MC14500-LIKE UNIT ROM CONTROL
 ICUROM1
 
 
-Clock NC    NC    NC    NC    NC    NC    NC    NC   GND
-/OE   HOLD  SCK   SDA   NC    Q3    Q2    Q1    Q0   VCC
+Clock A0    A1    A2    NC    NC    NC    NC    NC   GND
+/OE   NC    SCK   SDA   HOLD  Q3    Q2    Q1    Q0   VCC
 
 
 
@@ -34,21 +34,18 @@ Q3.R =  Q3 *  Q2 * HOLD * /SCK
      +  Q3 * /HOLD
      +  Q3 * SCK
 
-SCK.R = Q3 * Q2 * Q1 * Q0 * SDA * HOLD
+SCK.R = Q3 * Q2 * Q1 * Q0 * SDA * HOLD * SCK
       + /HOLD * /SCK
 
 HOLD.R = SCK
 
-;SDA.R = /HOLD * SDA
-;      +  Q3   *  Q2  * Q1  * /SDA * /SCK * HOLD
-;      +  Q3   *  Q2  * /Q1 * Q0 * /SDA * FSKP * A0 * /SCK * HOLD
-;      +  Q3   *  Q2  * /Q1 */Q0 *  FSKP * A1
-;      +  Q3   *  Q2  * /Q1 * /SDA * /FSKP
-;      +  Q3   *
-;      + /Q3   * /Q2  * /Q1 * /Q0 
 /SDA.R = /HOLD * /SDA
-       +  HOLD * SCK 
-       + Q3 * Q2 * Q1 * HOLD * SDA
-       + Q3 */Q1 * Q0 * HOLD * SDA  
-       +/Q2 */Q1 */Q0 * HOLD * SDA
+       +  HOLD *  SCK
+       + Q3 *  Q2       * Q0 * HOLD * SDA
+       + Q3 * /Q2 * /Q1 * Q0 * HOLD
+       +/Q3 * /Q2 * /Q1 */Q0 * HOLD
+       + Q3 *  Q2 * /Q1 * Q0 * HOLD * /A0
+       + Q3 *  Q2 * /Q1 */Q0 * HOLD * /A1
+       + Q3 * /Q2 *  Q1 * Q0 * HOLD * /A2
+
 DESCRIPTION

@@ -3,9 +3,9 @@
  Pin # | Name     | Pin Type
 -----------------------------
    1   | Clock    | Clock
-   2   | NC       | Input
-   3   | NC       | Input
-   4   | NC       | Input
+   2   | A0       | Input
+   3   | A1       | Input
+   4   | A2       | Input
    5   | NC       | Input
    6   | NC       | Input
    7   | NC       | Input
@@ -13,10 +13,10 @@
    9   | NC       | Input
   10   | GND      | GND
   11   | /OE      | /OE
-  12   | HOLD     | Output
+  12   | NC       | NC
   13   | SCK      | Output
   14   | SDA      | Output
-  15   | NC       | NC
+  15   | HOLD     | Output
   16   | Q3       | Output
   17   | Q2       | Output
   18   | Q1       | Output
