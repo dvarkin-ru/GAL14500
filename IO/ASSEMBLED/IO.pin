@@ -6,7 +6,7 @@
    2   | A2       | Input
    3   | A1       | Input
    4   | A0       | Input
-   5   | RD       | Input
+   5   | W        | Input
    6   | I4       | Input
    7   | I5       | Input
    8   | I6       | Input
