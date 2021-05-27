@@ -8,7 +8,7 @@ Pin 19 = Q0           XOR = 1   AC1 = 0
   4  --x- ---- ---- ---- ---- ---- --x- ----
   5  --x- --x- --x- --x- --x- ---x ---x ----
   6  --x- ---x --x- --x- --x- --x- ---x ----
-  7  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+  7  ---- ---- ---- ---- --x- ---- --x- ----
 
 Pin 18 = Q1           XOR = 1   AC1 = 0
   8  --x- --x- ---- ---- --x- ---- ---x ----
@@ -16,7 +16,7 @@ Pin 18 = Q1           XOR = 1   AC1 = 0
  10  ---x ---x ---- --x- --x- ---- ---x ----
  11  ---- --x- ---- ---- ---x ---- ---- ----
  12  ---- --x- ---- ---- ---- ---- --x- ----
- 13  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 13  ---- ---- ---- ---- --x- ---- --x- ----
  14  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  15  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
@@ -26,7 +26,7 @@ Pin 17 = Q2           XOR = 1   AC1 = 0
  18  ---x ---x ---x --x- --x- ---- ---x ----
  19  ---- ---- --x- ---- ---x ---- ---- ----
  20  ---- ---- --x- ---- ---- ---- --x- ----
- 21  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 21  ---- ---- ---- ---- --x- ---- --x- ----
  22  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  23  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
@@ -37,13 +37,13 @@ Pin 16 = Q3           XOR = 1   AC1 = 0
  27  ---x ---x ---x ---x --x- ---- ---x ----
  28  ---- ---- ---- --x- ---x ---- ---- ----
  29  ---- ---- ---- --x- ---- ---- --x- ----
- 30  ---x ---x ---x x-x- --x- ---- ---- ----
- 31  ---x ---x ---x --x- x-x- ---- ---- ----
+ 30  ---- ---- ---- ---- --x- ---- --x- ----
+ 31  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
 Pin 15 = HOLD         XOR = 1   AC1 = 0
  32  ---- ---- ---- ---- ---- ---- --x- ----
- 33  ---x ---x ---x x-x- --x- ---- ---- ----
- 34  ---x ---x ---x --x- x-x- ---- ---- ----
+ 33  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+ 34  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  35  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  36  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  37  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
@@ -52,20 +52,20 @@ Pin 15 = HOLD         XOR = 1   AC1 = 0
 
 Pin 14 = SDA          XOR = 0   AC1 = 0
  40  ---- ---- ---- ---- ---x ---x ---- ----
- 41  ---- ---- ---- ---- --x- ---- --x- ----
+ 41  --x- --x- --x- --x- --x- ---- --x- ----
  42  --x- ---- --x- --x- --x- --x- ---- ----
  43  --x- ---x ---x --x- --x- ---- ---- ----
- 44  ---x ---x ---x ---x --x- ---- ---- ----
+ 44  ---x ---x ---x -x-x -xx- ---- ---- ----
  45  -xx- ---x --x- --x- --x- ---- ---- ----
  46  ---x -x-x --x- --x- --x- ---- ---- ----
  47  --x- --x- -x-x --x- --x- ---- ---- ----
 
 Pin 13 = SCK          XOR = 1   AC1 = 0
  48  --x- --x- --x- --x- --x- --x- --x- ----
- 49  ---- ---- ---- ---- ---x ---- ---x ----
- 50  ---x ---x ---x x-x- --x- ---- ---- ----
- 51  ---x ---x ---x --x- x-x- ---- ---- ----
- 52  --x- --x- --x- --x- x--- ---- ---- ----
+ 49  ---- ---x ---x --x- x--- ---- ---- ----
+ 50  ---x ---x ---x x-x- ---- ---- ---- ----
+ 51  ---- ---- ---- ---- ---x ---- ---x ----
+ 52  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  53  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  54  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  55  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx

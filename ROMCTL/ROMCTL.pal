@@ -14,18 +14,21 @@ Q0.R = /Q0 * HOLD * /SCK * Q1
      +  Q0 * SCK
      +  Q3 * Q2 *  Q1 * Q0 * /SDA * HOLD * /SCK
      +  Q3 * Q2 * /Q1 * Q0 *  SDA * HOLD * /SCK
+     +  HOLD * SCK
 
 Q1.R = Q1 *  Q0  * HOLD * /SCK
      + Q2 * /Q1 * /Q0 * HOLD * /SCK
      + Q3 * /Q1 * /Q0 * HOLD * /SCK
      + Q1 * /HOLD
      + Q1 * SCK
+     + HOLD * SCK
 
 Q2.R = Q2 *  Q0 * HOLD * /SCK
      + Q2 *  Q1 * HOLD * /SCK
      + Q3 * /Q2 */Q1 */Q0 * HOLD * /SCK
      + Q2 * /HOLD
      + Q2 * SCK
+     + HOLD * SCK
 
 Q3.R =  Q3 *  Q2 * HOLD * /SCK
      +  Q3 *  Q1 * HOLD * /SCK
@@ -33,24 +36,20 @@ Q3.R =  Q3 *  Q2 * HOLD * /SCK
      + /Q3 * /Q2 * /Q1 * /Q0 * HOLD * /SCK
      +  Q3 * /HOLD
      +  Q3 * SCK
-     +  Q3 * /Q2 * /Q1 * /Q0 * HOLD * JMP
-     +  Q3 * /Q2 * /Q1 * /Q0 * HOLD * R
+     +  HOLD * SCK
 
 SCK.R = Q3 * Q2 * Q1 * Q0 * SDA * HOLD * SCK
+      + Q3 */Q2 */Q1      * R
+      + Q3 */Q2 */Q1 */Q0 * JMP
       + /HOLD * /SCK
-      + Q3 */Q2 */Q1 */Q0 * HOLD * JMP
-      + Q3 */Q2 */Q1 */Q0 * HOLD * R
-      + Q3 * Q2 * Q1 * Q0 * R
 
 HOLD.R = SCK
-       + Q3 */Q2 */Q1 */Q0 * HOLD * JMP
-       + Q3 */Q2 */Q1 */Q0 * HOLD * R
 
 /SDA.R = /HOLD * /SDA
-       +  HOLD *  SCK
+       + Q3 *  Q2 *  Q1 * Q0 * HOLD * SCK
        + Q3 *  Q2       * Q0 * HOLD * SDA
        + Q3 * /Q2 * /Q1 * Q0 * HOLD
-       +/Q3 * /Q2 * /Q1 */Q0 * HOLD
+       +/Q3 * /Q2 * /Q1 */Q0 * HOLD * /R * /JMP
        + Q3 *  Q2 * /Q1 * Q0 * HOLD * /A0
        + Q3 *  Q2 * /Q1 */Q0 * HOLD * /A1
        + Q3 * /Q2 *  Q1 * Q0 * HOLD * /A2
