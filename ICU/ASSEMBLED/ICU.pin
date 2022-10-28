@@ -3,7 +3,7 @@
  Pin # | Name     | Pin Type
 -----------------------------
    1   | Clock    | Clock
-   2   | NC       | Input
+   2   | DIS      | Input
    3   | DI       | Input
    4   | I3       | Input
    5   | I2       | Input

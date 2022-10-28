@@ -1,23 +1,23 @@
 
 
-Pin 19 = W            XOR = 1   AC1 = 0
-  0  ---- ---- x--- -x-- -x-- -xx- ---- ---x
-  1  ---- ---- x--- -x-- -x-- x-x- ---- ---x
-  2  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+Pin 19 = W            XOR = 1   AC1 = 1
+  0  ---- ---- ---- ---- ---- ---- ---- ----
+  1  ---- ---- x--- -x-- -x-- -xx- -x-- ---x
+  2  ---- ---- x--- -x-- -x-- x-x- -x-- ---x
   3  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   4  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   5  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   6  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
   7  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
-Pin 18 = DO           XOR = 1   AC1 = 0
-  8  ---- ---- x-x- -x-- -x-- -x-- ---- ---x
-  9  ---- ---- x--x -x-- -x-- x--- ---- ---x
- 10  ---- --x- -x-- ---- ---- ---- -x-- ----
- 11  ---- --x- ---- x--- ---- ---- -x-- ----
- 12  ---- --x- ---- ---- x--- ---- -x-- ----
- 13  ---- --x- ---- ---- ---- ---- -x-- --x-
- 14  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+Pin 18 = DO           XOR = 1   AC1 = 1
+  8  ---- ---- ---- ---- ---- ---- ---- ----
+  9  ---- ---- x-x- -x-- -x-- -x-- ---- ---x
+ 10  ---- ---- x--x -x-- -x-- x--- ---- ---x
+ 11  x--- ---- -x-- ---- ---- ---- ---- ----
+ 12  x--- ---- ---- x--- ---- ---- ---- ----
+ 13  x--- ---- ---- ---- x--- ---- ---- ----
+ 14  x--- ---- ---- ---- ---- ---- ---- --x-
  15  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
 
 Pin 17 = RR           XOR = 1   AC1 = 0
@@ -30,9 +30,9 @@ Pin 17 = RR           XOR = 1   AC1 = 0
  22  ---- ---- -x-- x--- --x- ---- -x-- ---x
  23  ---- ---- --x- ---- ---- ---- -x-- --x-
 
-Pin 16 = JMP          XOR = 1   AC1 = 0
- 24  ---- ---- x--- x--- -x-- -x-- ---- ---x
- 25  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+Pin 16 = JMP          XOR = 1   AC1 = 1
+ 24  ---- ---- ---- ---- ---- ---- ---- ----
+ 25  ---- ---- x--- x--- -x-- -x-- -x-- ---x
  26  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  27  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
  28  xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx

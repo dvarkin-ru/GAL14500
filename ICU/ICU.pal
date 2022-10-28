@@ -1,7 +1,7 @@
 GAL16V8                                 MC14500-LIKE UNIT
 ICU1
 
-Clock NC    DI    I3    I2    I1    I0    /R    NC    GND
+Clock DIS   DI    I3    I2    I1    I0    /R    NC    GND
 /OE   FSKP  IEN   OEN   RRR   JMP   RR    DO    W     VCC
 
 
@@ -21,15 +21,15 @@ RR.R  =  I3                               *  RR   * R
       + /I3 *  I2 *  I1 *  I0 * IEN * /DI *  RR
       + /I3 *  I2 *  I1 *  I0 */IEN       *  RR
 
-DO.R  =  I3 * /I2 * /I1 * /I0 */FSKP      *  RR
-      +  I3 * /I2 * /I1 *  I0 */FSKP      * /RR
-      + /I3                         * DO          * R
-            +  I2                   * DO          * R
-                  +  I1             * DO          * R
-                                    + DO  *  FSKP * R
+DO    =  I3 * /I2 * /I1 * /I0       * RR  * /FSKP
+      +  I3 * /I2 * /I1 *  I0       */RR  * /FSKP
+      + /I3                         * DIS
+            +  I2                   * DIS
+                  +  I1             * DIS
+                                    + DIS *  FSKP
 
-W.R   =  I3 * /I2 * /I1 * /I0 * OEN       * /FSKP
-      +  I3 * /I2 * /I1 *  I0 * OEN       * /FSKP
+W     =  I3 * /I2 * /I1 * /I0 * OEN       * /FSKP * R
+      +  I3 * /I2 * /I1 *  I0 * OEN       * /FSKP * R
 
 IEN.R =  I3 * /I2 *  I1 * /I0       *  DI * /FSKP * R
       + /I3                   * IEN               * R
@@ -45,7 +45,7 @@ OEN.R =  I3 * /I2 *  I1 *  I0       *  DI * /FSKP * R
                         + /I0 * OEN               * R
                               + OEN       *  FSKP * R
 
-JMP.R =  I3 *  I2 * /I1 * /I0             * /FSKP
+JMP    = I3 *  I2 * /I1 * /I0             * /FSKP * R
 
 FSKP.R = I3 *  I2 *  I1 * /I0 * /RR       * /FSKP * R
        + I3 *  I2 * /I1 *  I0             * /FSKP * R
@@ -57,6 +57,7 @@ RRR                - ADDITIONAL TERM FOR LOGICAL UNIT
          I3    I2    I1    I0      - INSTRUCTION PINS
 OUTPUT ENABLE REG -            OEN
 INPUT ENABLE REG  -            IEN
+DATA INPUT SERIAL -                   DIS
 DATA INPUT        -                   DI
 RESULT REGISTER   -                         RR
 SKIP FLIP-FLOP    -                         FSKP   

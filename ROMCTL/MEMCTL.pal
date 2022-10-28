@@ -3,7 +3,7 @@ ICUROM1
 
 
 Clock A0    A1    A2    JMP   R     NC    NC    NC   GND
-/OE   NC    SCK   SDA   HOLD  Q3    Q2    Q1    Q0   VCC
+/OE   RCK   SCK   SDA   HOLD  Q3    Q2    Q1    Q0   VCC
 
 
 
@@ -42,6 +42,11 @@ SCK.R = Q3 * Q2 * Q1 * Q0 * SDA * HOLD * SCK
       + Q3 */Q2 */Q1      * R
       + Q3 */Q2 */Q1 */Q0 * JMP
       + /HOLD * /SCK
+
+RCK   = A2 * /A1 * /A0 * SCK * /Q3 * /Q2 * /Q1 * /Q0
+      + A2 * /A1 *  A0 * SCK * /Q3 * /Q2 * /Q1
+      + A2 *  A1 * /A0 * SCK * /Q3 * /Q2
+      + A2 *  A1 *  A0 * SCK * /Q3
 
 HOLD.R = SCK
 
